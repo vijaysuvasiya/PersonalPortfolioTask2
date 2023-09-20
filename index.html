@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="Header">
+		<div class="container">
+			<nav>
+				<img src="logo.png" class="logo">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Service</a></li>
+					<li><a href="#">Portfolio</a></li>
+					<li><a href="#">Contact</a></li>						
+				</ul>
+			</nav>
+			<div class="header-text">
+				<p>WEB Desigener</p>
+				
+				<h1>Hii , I'am <span>Vijay</span> <br> From India</h1>
+			</div>
+		</div>
+	</div>
+	<div id="about">
+		<div class="container">
+			<div class="row">
+				<div class="about-col-1">
+					<img src="image1.jpg">
+				</div>
+				<div class="about-col-2">
+					<h1 class="sub-title">About Me</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia blanditiis neque dignissimos maxime cumque, cum beatae assumenda voluptate magnam obcaecati ducimus molestiae doloribus ad, laboriosam illum commodi nesciunt alias excepturi?
+					Placeat minima, voluptate dolorem accusantium odio nisi. Inventore quas similique eligendi impedit blanditiis! Non reiciendis adipisci minima saepe, provident modi, ullam officiis voluptas placeat, beatae deserunt eligendi neque quia iure?
+					Qui ullam quo aut ratione doloremque excepturi consequatur? Porro quae cumque libero dicta laborum sint quaerat vitae, aliquid, enim nostrum modi, distinctio aspernatur nisi expedita provident et repellendus ut fugit.0</p>
+					<div class="tab-titles">
+						<p class="tab-links active-link" onclick="opentab('Skills') ">Skills</p>
+						<p class="tab-links" onclick="opentab('Exprience') ">Exprience</p>
+						<p class="tab-links" onclick="opentab('Education') ">Education</p>
+					</div>
+					<div class="tab-contents active-tab"  id="Skills">
+						<ul>
+							<li><span>UIUX</span><br>Desigening Web/App interfaces</li>
+							<li><span>Web Development</span><br>Desigening Web/App interfaces</li>
+							<li><span>App Development</span><br>Desigening Web/App interfaces</li>
+							<li><span>Game Dev</span><br>Desigening Web/App interfaces</li>
+						</ul>
+					</div>
+					<div class="tab-contents" id="Exprience">
+						<ul>
+							<li><span>UIUX</span><br>Desigening Web/App interfaces</li>
+							<li><span>Web Development</span><br>Desigening Web/App interfaces</li>
+							<li><span>App Development</span><br>Desigening Web/App interfaces</li>
+							<li><span>Game Dev</span><br>Desigening Web/App interfaces</li>
+						</ul>
+					</div>
+					<div class="tab-contents" id="Education">
+						<ul>
+							<li><span>UIUX</span><br>Desigening Web/App interfaces</li>
+							<li><span>Web Development</span><br>Desigening Web/App interfaces</li>
+							<li><span>App Development</span><br>Desigening Web/App interfaces</li>
+							<li><span>Game Dev</span><br>Desigening Web/App interfaces</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Service-->
+	<div id="services">
+		<div class="container">
+			<h1 class="sub-titles">
+				My Services
+			</h1>
+			<div class="servicelist">
+				<div>
+					<h2>Web Desigener</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, soluta assumenda!</p>
+					<a href="#">Learn More</a>
+				</div>
+				<div>
+					<h2>UX/UI Desigening</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, soluta assumenda!</p>
+					<a href="#">Learn More</a>
+				</div>
+				<div>
+					<h2>App Development</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, soluta assumenda!</p>
+					<a href="#">Learn More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--portfolio-->
+	<div class="portfolio">
+		<div class="container">
+			<h1 class="subtitles">
+				My Work
+			</h1>
+			<div class="worklist">
+				<div class="work">
+					<img src="img1.png">
+					<div class="layer">
+						<h3>Online Footwear Shop(MernStack)</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, porro et.</p>
+						<a href="#"><i class="fas fa-external-link-alt"></i></a>
+					</div>
+				</div>
+				<div class="work">
+					<img src="img2.jpg">
+					<div class="layer">
+						<h3>Hostel Management(Java)</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, porro et.</p>
+						<a href="#"><i class="fas fa-external-link-alt"></i></a>
+					</div>
+				</div>
+				<div class="work">
+					<img src="img3.jpg">
+					<div class="layer">
+						<h3>Flappy plane game(Unity)</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, porro et.</p>
+						<a href="#"><i class="fas fa-external-link-alt"></i></a>
+					</div>
+				</div>
+			</div>
+
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		var tablinks=document.getElementsByClassName("tab-links");
+		var tabcontents=document.getElementsByClassName("tab-contents");
+		 function opentab(tabname)
+		 {
+			for(tablink of tablinks)
+			{
+				tablink.classList.remove("active-link");
+			}
+			for(tabcontent of tabcontents)
+			{
+				tabcontent.classList.remove("active-tab");
+			}
+			event.currentTarget.classList.add("active-link");
+			document.getElementById(tabname).classList.add("active-tab");
+		 }
+	</script>
+</body>
+</html>
